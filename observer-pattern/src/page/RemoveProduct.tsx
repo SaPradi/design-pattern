@@ -4,13 +4,10 @@ import { inventoryService } from '../services/inventory.service';
 const RemoveProduct: React.FC = () => {
   const [id, setId] = useState<string>('');
 
-  const handleRemoveProduct = () => {
-    inventoryService.removeProduct(Number(id));
-    setId('');
-  };
+
 
   return (
-    <div>
+    <div className='flex flex-col gap-2 bg-slate-900  p-6 rounded-sm shadow-sm'>
       <input
         type="text"
         value={id}

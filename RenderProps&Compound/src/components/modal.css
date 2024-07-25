@@ -1,0 +1,103 @@
+.modal{
+    backdrop-filter: blur(14px) brightness(100%);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.modal-container button.modal-container__button{
+    border: none;
+    background: none;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+.modal-container button.modal-container__button svg{
+    height: 1rem;
+    width: 1rem;
+}
+
+.modal-container button.modal-container__button svg path{
+    
+    fill: #CF6679 ;
+}
+.modal-container{
+    
+    border: .8px solid #cbcbcb ;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    color: black;
+}
+
+/* triger Animaciones */
+.modal.open{
+    animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.modal.close{
+    animation: fade-out .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+}
+
+.modal.open .modal-container{
+    animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.modal.close .modal-container{
+    animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes scale-out-center {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 1;
+    }
+}
+@keyframes scale-in-center {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

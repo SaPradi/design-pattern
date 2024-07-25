@@ -1,0 +1,44 @@
+main{
+    height: 100vh;
+    
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+.patterns-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 10rem;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+.patterns-text p{
+    font-size: 2rem;
+    font-style: italic;
+    color: rgb(126, 126, 126);
+}
+
+button{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: .7rem;
+    transition: all .4s ease-in;
+    background-color: #C1D72F;
+    cursor: pointer;
+}
+
+button:hover{
+
+    background-color: #72801a;
+
+}
